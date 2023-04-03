@@ -17,8 +17,9 @@ app.get('/:nome', (req, res) => {
     const sql = `SELECT * FROM usuario WHERE usuario.nome = '${req.params.nome}'`
 
     dataBase.query(sql, (err, rows) => {
-        if (err) console.log(err)
-        else res.json(rows[0])
+        if (err) return console.log(err)
+        if (rows[0]) return res.json(rows[0])
+        return res.json({ mensage: "Não foi possivel encontrar o usuário." })
     })
 })
 

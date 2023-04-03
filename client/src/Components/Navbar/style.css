@@ -1,0 +1,38 @@
+.navbar {
+    min-width: 100vw;
+    height: 45px;
+    padding: 0 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--primary);
+    color: #f0f0f0;
+}
+
+.navbar .navbar-left .logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .navbar-center ul {
+    display: flex;
+    gap: 50px;
+
+    list-style: none;
+}
+
+.navbar .navbar-center ul li {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.navbar .navbar-right .userImage {
+    width: 30px;
+    border-radius: 10px;
+}
